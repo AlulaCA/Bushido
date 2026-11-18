@@ -1,0 +1,6 @@
+{
+  "name": "Bushido Art Studio — Hybrid AI Music Production DAW",
+  "description": "Hybrid AI Music Production DAW bertema gelap tajam dengan komposer lirik Gemini, kontrol engine YuE2 Max & UVR5, pemutar audio sintetis, dan mixer 4 stem.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

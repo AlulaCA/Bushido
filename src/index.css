@@ -1,0 +1,87 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #08080a;
+    color: #f4f4f5;
+    overflow-x: hidden;
+  }
+
+  .font-mono,
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+:root {
+  --project-accent: #dc2626;
+}
+
+/* Custom sleek studio scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--project-accent);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Horizontal DAW slider */
+input[type="range"].daw-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"].daw-slider::-webkit-slider-runnable-track {
+  height: 5px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+input[type="range"].daw-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 16px;
+  border-radius: 2px;
+  background: #f4f4f5;
+  border: 1px solid var(--project-accent);
+  margin-top: -5.5px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.75);
+  transition: transform 0.12s ease, background-color 0.12s ease;
+}
+
+input[type="range"].daw-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.08);
+  background: #ffffff;
+}
+
+input[type="range"].daw-slider:focus-visible {
+  outline: 2px solid var(--project-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
